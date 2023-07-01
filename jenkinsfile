@@ -1,4 +1,4 @@
-pipeline{
+pipeline {
 	agent any
 	stages{
 		stage('1-s1'){
@@ -29,5 +29,7 @@ pipeline{
             steps{
                 echo "welcome to Jenkinsfile"
                 echo "welcome to King Moses LLC"
+            }
+        }
 	}
 }
