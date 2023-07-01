@@ -1,4 +1,4 @@
-pipeline {
+pipeline{
 	agent any
 	stages{
 		stage('1-s1'){
@@ -10,7 +10,7 @@ pipeline {
 		stage('2-s2'){
 			steps{
 				sh 'lscpu'
-				sh 'whoami'
+				sh 'logname'
 			}
 		}
 		stage('3-s3'){
@@ -28,3 +28,7 @@ pipeline {
         stage('5-s5'){
             steps{
                 echo "welcome to Jenkinsfile"
+            }
+        }
+	}
+}
