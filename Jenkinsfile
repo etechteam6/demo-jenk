@@ -24,5 +24,10 @@ pipeline{
 				sh 'du -h'
 			}
 		}
+        stage('5-scriptdemo'){
+            steps{
+                sh 'bash -x /var/lib/jenkins/workspace/team6-demo1-pipeline/scriptdemo.sh'
+            }
+        }
 	}
 }
