@@ -1,10 +1,9 @@
 pipeline{
 	agent any
 	stages{
-		stage('1-s1'){
+		stage('1-clonecode'){
 			steps{
-				sh 'cat /etc/passwd'
-				sh 'whoami'
+                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'github-cred', url: 'https://github.com/etechteam6/team6-demo1.git']])
 			}
 		}
 		stage('2-s2'){
