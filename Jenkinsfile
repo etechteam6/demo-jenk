@@ -1,9 +1,9 @@
-pipeline {
+pipeline{
 	agent any
 	stages{
 		stage('1-clonecode'){
 			steps{
-                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'github-cred', url: 'https://github.com/etechteam6/team6-demo1.git']])
+                sh 'echo "getting better"'
 			}
 		}
 		stage('2-s2'){
@@ -29,9 +29,10 @@ pipeline {
                 echo "welcome to Jenkinsfile"
             }
         }
-        stage('6-s6')
+        stage('6-s6'){
             steps{
-            echo "welcome to King Moses LLC"
+                sh 'pwd'
+            }
         }
 	}
 }
