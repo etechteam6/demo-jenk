@@ -24,6 +24,20 @@ pipeline{
 				sh 'du -h'
 			}
 		}
+        stage('5-s5'){
+			parallel {
+				stage('p1'){
+					steps{
+						echo "first parallel-stage"
+					}
+				}
+				stage('p2'){
+					steps{
+						echo "second parallel-stage"
+					}
+				}
+			}
+        }
         stage('5-scriptdemo'){
             steps{
                 sh 'bash -x /var/lib/jenkins/workspace/team6-demo1-pipeline/scriptdemo.sh'
