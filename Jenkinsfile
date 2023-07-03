@@ -1,4 +1,4 @@
-pipeline {
+pipeline{
 	agent any
 	stages{
 		stage('1-clonecode'){
@@ -9,7 +9,7 @@ pipeline {
 		stage('2-s2'){
 			steps{
 				sh 'lscpu'
-				sh 'whoami'
+				sh 'logname'
 			}
 		}
 		stage('3-s3'){
@@ -24,14 +24,5 @@ pipeline {
 				sh 'du -h'
 			}
 		}
-        stage('5-s5'){
-            steps{
-                echo "welcome to Jenkinsfile"
-            }
-        }
-        stage('6-s6')
-            steps{
-            echo "welcome to King Moses LLC"
-        }
 	}
 }
