@@ -30,5 +30,10 @@ pipeline{
                 echo "welcome to Jenkinsfile"
             }
         }
+        stage('6-s6'){
+            steps{
+                echo "welcome to king moses llc"
+            }
+        }
 	}
 }
