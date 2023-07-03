@@ -28,8 +28,3 @@ pipeline {
         stage('5-s5'){
             steps{
                 echo "welcome to Jenkinsfile"
-                echo "welcome to King Moses LLC"
-            }
-        }
-	}
-}
