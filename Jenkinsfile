@@ -1,4 +1,4 @@
-pipeline{
+pipeline {
 	agent any
 	stages{
 		stage('1-clonecode'){
@@ -28,6 +28,10 @@ pipeline{
             steps{
                 echo "welcome to Jenkinsfile"
             }
+        }
+        stage('6-s6')
+            steps{
+            echo "welcome to King Moses LLC"
         }
 	}
 }
