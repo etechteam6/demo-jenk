@@ -1,4 +1,4 @@
-pipeline{
+pipeline {
 	agent any
 	stages{
 		stage('1-s1'){
@@ -25,5 +25,10 @@ pipeline{
 				sh 'du -h'
 			}
 		}
+        stage('5-s5'){
+            steps{
+                echo "welcome to Jenkinsfile"
+            }
+        }
 	}
 }
