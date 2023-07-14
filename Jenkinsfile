@@ -20,7 +20,7 @@ pipeline{
 		}
 		stage('4-s4'){
 			steps{
-				sh 'pwd'
+				sh 'whoami'
 				sh 'du -h'
 			}
 		}
